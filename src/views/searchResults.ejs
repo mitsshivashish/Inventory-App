@@ -1,0 +1,18 @@
+<!-- Write your code here to render the search data -->
+<h1>Search Results</h1>
+<% if (products.length == 0) { %>
+    <div class="container my-2 text-danger">
+        <h1>OOPS !! No product found</h1>
+    </div>
+<% } else { %>
+    <div class="container p-5 gap-2 d-flex flex-wrap">
+        <% products.forEach((product) =>{ %>
+            <div class="card" style="width: 300px;">
+                <img class="card-img-top" src="<%=product.image%>" alt="">
+                <div class="card-body">
+                    <p class="card-text"><%=product.name%></p>
+                </div>
+            </div>
+       <% }) %>
+    </div>
+ <% } %>
